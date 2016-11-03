@@ -33,8 +33,8 @@ if defined?(ActiveRecord::Base)
   ActiveRecord::Base.extend ActsAsApi::Base
 
   # Rails 5 compatibility for CollectionProxy and Relation
-  if defined?(ActiveRecord::Delegation)
-    ActiveRecord::Delegation.include(ActsAsApi::Collection)
+  if defined?(ActiveRecord::Relation)
+    ActiveRecord::Relation.include(ActsAsApi::Collection)
   end
 end
 
